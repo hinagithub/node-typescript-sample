@@ -21,19 +21,23 @@ docker compose up -d
 ブラウザ
 
 ```
-http://localhost:5601/app/home#/
+http://localhost:5601/app/dev_tools#/console
 ```
 
-![image](https://user-images.githubusercontent.com/44778704/220254076-d504b0f9-4b71-42f6-a532-d7c081b5983c.png)
+(ホーム画面からはサイドメニューの `dev Tools`押下で移動可能)
 
-左のメニューから DevTool を選択するとコンソールが開いてクエリを投げることが可能
+- 新規作成
 
-![image](https://user-images.githubusercontent.com/44778704/220254278-2d85a997-4cc2-403e-9a6a-bf9d5659aaad.png)
+```
+POST /user/_doc
+{
+  "ID": "001",
+  "Name":"Taro",
+  "Created_at":"2023/11/01 09:00 JST"
+}
+```
 
-- index = database のようなもの
-- index/
-
-- 作成
+- 編集
 
 ```
 PUT /user/_doc/1
